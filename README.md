@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
+**## ADVENTURE TRIANGLE (NEXT.JS)**
+## DESCRIPTION
+Adventure Triangle is a Next.js App Router landing page with Tailwind CSS styling and client-side forms (Partner, Launch Event, Beta). The root HTML structure is defined in app/layout.tsx, and the main page UI + form handlers live in app/page.tsx.​
+REQUIREMENTS
+Node.js and npm installed
+Dependencies installed via npm
+Tailwind configured through PostCSS (recommended approach for Next.js projects).
+​
+## GETTING STARTED (LOCAL)
+Install dependencies:
+npm install
+Start the dev server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open: http://localhost:3000
+PRODUCTION BUILD
+Build:
+npm run build
+Start:
+npm run start
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## PROJECT FILES (COMMON)
+app/layout.tsx: Root layout, metadata, imports app/globals.css.​
+app/page.tsx: Landing page content, form handlers, in-memory debug storage.
+app/globals.css: Global CSS + Tailwind import and custom styles.
+postcss.config.mjs: PostCSS plugins for Tailwind.​
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## DUMMY DATA / DEBUG STORAGE
+If you added an in-memory ref store (storageRef) and exposed a global debug function, you can inspect saved submissions in the browser:
+Open the site in your browser
+Open DevTools Console
+Run:
+DEBUG_STORAGE()
+Note: In-memory dummy storage resets on page refresh and redeploys.
