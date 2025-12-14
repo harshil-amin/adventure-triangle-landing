@@ -698,7 +698,7 @@ const storageRef = useRef({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/triangleadventureco/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur rounded-xl p-6 transition-all duration-300 hover:scale-105"
@@ -709,7 +709,7 @@ const storageRef = useRef({
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/adventuretriangle/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur rounded-xl p-6 transition-all duration-300 hover:scale-105"
@@ -720,7 +720,7 @@ const storageRef = useRef({
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/p/DSLkWPtEtPW/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur rounded-xl p-6 transition-all duration-300 hover:scale-105"
@@ -731,7 +731,7 @@ const storageRef = useRef({
             </a>
 
             <a
-              href="https://tiktok.com"
+              href="https://www.tiktok.com/@triangleadventures?lang=en-GB"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur rounded-xl p-6 transition-all duration-300 hover:scale-105"
