@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type FeedbackState = {
   partner?: { type: "success" | "error"; message: string } | null;
@@ -14,6 +14,18 @@ export default function Home() {
     event: null,
     beta: null,
   });
+
+
+const storageRef = useRef({
+  partners: [] as any[],
+  launchEvent: [] as any[],
+  betaUsers: [] as any[],
+});
+
+// expose helper in the browser console
+  useEffect(() => {
+    (window as any).DEBUG_STORAGE = () => console.log(storageRef.current);
+  }, []);
 
   const clearLater = (key: keyof FeedbackState) => {
     window.setTimeout(() => {
@@ -35,6 +47,9 @@ export default function Home() {
         message: String(fd.get("message") || ""),
         timestamp: new Date().toISOString(),
       };
+
+      // save to dummy storage
+      storageRef.current.partners.push(data);
 
       console.log("Partner inquiry:", data);
 
@@ -71,6 +86,9 @@ export default function Home() {
         timestamp: new Date().toISOString(),
       };
 
+      // save to dummy storage
+      storageRef.current.launchEvent.push(data);
+
       console.log("Launch event registration:", data);
 
       setFeedback((prev) => ({
@@ -104,6 +122,9 @@ export default function Home() {
         country: String(fd.get("country") || ""),
         timestamp: new Date().toISOString(),
       };
+
+      // save to dummy storage
+      storageRef.current.betaUsers.push(data);
 
       console.log("Beta signup:", data);
 
@@ -148,6 +169,7 @@ export default function Home() {
       </div>
     );
   }, [feedback.beta]);
+
 
   return (
     <div className="bg-white text-gray-900">
