@@ -1,4 +1,5 @@
-**## ADVENTURE TRIANGLE (NEXT.JS)**
+## ADVENTURE TRIANGLE (NEXT.JS)
+
 ## DESCRIPTION
 Adventure Triangle is a Next.js App Router landing page with Tailwind CSS styling and client-side forms (Partner, Launch Event, Beta). The root HTML structure is defined in app/layout.tsx, and the main page UI + form handlers live in app/page.tsx.​
 REQUIREMENTS
